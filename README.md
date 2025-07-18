@@ -1,5 +1,6 @@
 # Threading_Sounds
-Application where TCS training will be developed
+Application where TCS training will be developed.
+We will create a Java Spring Boot application as a backend service to manage music songs allocated in our database.
 
 ## Architecture
 - **Spring Boot**: API REST.
@@ -30,6 +31,8 @@ Actually a really simple one as it is only one table, you can check it [here](ht
 4. Testing and final documentation.
 
 ## Walkthrough
+
+### Database creation
 First we will need to create our PostgreSQL database and user, to do so:
 ```bash
 sudo -u postgres psql
@@ -54,3 +57,24 @@ CREATE TABLE songs (
     length INT NOT NULL
 );
 ```
+
+### Spring initializr
+We will visit the page of [Spring initializr](https://start.spring.io/) and fill the options as the image
+
+![Spring Initializr Configuration](/documentation_imgs/Spring_Initializr.png)
+
+The 3 dependencies:
+- Spring Web: includes many functions for web development, needed to create a RESTful API.
+- Spring Data JPA: makes the access and management of the database from our Spring Boot app easier.
+- PostgreSQL Driver: driver needed to connect to a PostgreSQL database.
+
+Now we can create a hello world class inside our /src/main/com/threadingsounds/...
+
+```java
+@GetMapping("/hello")
+    public String hello() {
+        return "Hello world";
+	}
+```
+
+# WIP, /HELLO CRASHING NEEDED CONNECTION TO DATABASE
