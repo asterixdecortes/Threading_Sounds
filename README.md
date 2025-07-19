@@ -10,8 +10,8 @@ We will create a Java Spring Boot application as a backend service to manage mus
 ## Requirements
 - CRUD (title, artist, album, lenght).
 - Error handling.
-- logging.
-- health checks.
+- Logging.
+- Health checks.
 
 ## Endpoints REST
 - `GET /songs`
@@ -77,4 +77,41 @@ Now we can create a hello world class inside our /src/main/com/threadingsounds/.
 	}
 ```
 
-# WIP, /HELLO CRASHING NEEDED CONNECTION TO DATABASE
+We need to check that our pom.xml has the dependencies for the postgreSQL Database and drivers
+
+```xml
+<dependency>
+	<groupId>org.postgresql</groupId>
+	<artifactId>postgresql</artifactId>
+	<scope>runtime</scope>
+</dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+```
+
+Then, inside /src/main/resources/application.properties
+
+```properties
+spring.application.name=Threading-Sounds
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/threading_sounds
+spring.datasource.username=ts_user
+spring.datasource.password=password
+```
+
+Where:
+- url: the url where our database is hosted, by default PostgreSQL runs on port 5432
+- username: the user we created to access the database, this is important as to not to access it as an admin which can be insecure
+- password: password given to the user
+
+Once this is done, we can run in our terminal
+
+```bash
+./mvnw spring-boot:run
+```
+
+and if we visit http://localhost:8080/hello or make a curl request, we should see our hello world
+
+![Hello World](/documentation_imgs/Hello_World.png)
