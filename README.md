@@ -115,3 +115,6 @@ Once this is done, we can run in our terminal
 and if we visit http://localhost:8080/hello or make a curl request, we should see our hello world
 
 ![Hello World](/documentation_imgs/Hello_World.png)
+
+### REST Endpoints
+WIP
