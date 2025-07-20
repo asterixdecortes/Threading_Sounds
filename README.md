@@ -116,5 +116,12 @@ and if we visit http://localhost:8080/hello or make a curl request, we should se
 
 ![Hello World](/documentation_imgs/Hello_World.png)
 
-### REST Endpoints
-WIP
+I forgot to add lombok as a dependency so we have to add it in our pom.xml 
+```xml
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+</dependency>
+```
+
+### Entity
