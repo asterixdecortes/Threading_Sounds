@@ -99,9 +99,9 @@ Then, inside /src/main/resources/application.properties
 ```properties
 spring.application.name=Threading-Sounds
 
-spring.datasource.url=jdbc:postgresql://localhost:5432/threading_sounds
-spring.datasource.username=ts_user
-spring.datasource.password=password
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
 spring.jpa.hibernate.ddl-auto=update
 ```
 
@@ -110,6 +110,22 @@ Where:
 - username: the user we created to access the database, this is important as to not to access it as an admin which can be insecure
 - password: password given to the user
 - jpa.hibernate: this will declare the way the database behaves.
+
+The ones starting with $ are environment variables so that you can define them in your system with
+
+```bash
+export DB_URL=jdbc:postgresql://localhost:5432/threading_sounds
+export DB_USERNAME=ts_user
+export DB_PASSWORD=password
+```
+
+Or if you docker this app, save them in a .env looking like:
+
+```env
+DB_URL=jdbc:postgresql://db:5432/threading_sounds
+DB_USERNAME=ts_user
+DB_PASSWORD=supersegura
+```
 
 Once this is done, we can run in our terminal
 
@@ -129,7 +145,7 @@ I forgot to add lombok as a dependency so we have to add it in our pom.xml
 </dependency>
 ```
 
-### Entity
+### Songs
 Each of these objects will represent a song, taking the data from the database
 ```java
 @Table(name="songs")
@@ -138,3 +154,8 @@ Each of these objects will represent a song, taking the data from the database
 That first line will create a table if needed or edit the one existing.
 The second one will manage the colums.
 
+### SongsRepository
+
+### MainController
+
+### MainService
