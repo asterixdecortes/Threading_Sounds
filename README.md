@@ -46,17 +46,20 @@ CREATE USER ts_user WITH PASSWORD 'password';
 GRANT ALL PRIVILEGES ON DATABASE threading_sounds TO ts_user;
 ```
 
-Then, we can create the table needed
+Then we will connect to the database and give all permissions needed to that user and make new objects inherit privileges.
 
 ```sql
-CREATE TABLE songs (
-    id SERIAL PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    artist VARCHAR(255) NOT NULL,
-    album VARCHAR(255) NOT NULL,
-    length INT NOT NULL
-);
+GRANT CREATE ON SCHEMA public TO ts_user;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO ts_user;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO ts_user;
+GRANT USAGE ON SCHEMA public TO ts_user;
+
+--inheritance
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO ts_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO ts_user;
 ```
+
+We will not create a table here as we will do that in our code, anyway you should create a test one to check your privileges.
 
 ### Spring initializr
 We will visit the page of [Spring initializr](https://start.spring.io/) and fill the options as the image
@@ -99,12 +102,14 @@ spring.application.name=Threading-Sounds
 spring.datasource.url=jdbc:postgresql://localhost:5432/threading_sounds
 spring.datasource.username=ts_user
 spring.datasource.password=password
+spring.jpa.hibernate.ddl-auto=update
 ```
 
 Where:
 - url: the url where our database is hosted, by default PostgreSQL runs on port 5432
 - username: the user we created to access the database, this is important as to not to access it as an admin which can be insecure
 - password: password given to the user
+- jpa.hibernate: this will declare the way the database behaves.
 
 Once this is done, we can run in our terminal
 
@@ -125,3 +130,11 @@ I forgot to add lombok as a dependency so we have to add it in our pom.xml
 ```
 
 ### Entity
+Each of these objects will represent a song, taking the data from the database
+```java
+@Table(name="songs")
+@Column (name = "title", nullable = false)
+```
+That first line will create a table if needed or edit the one existing.
+The second one will manage the colums.
+
