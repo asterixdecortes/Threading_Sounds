@@ -59,7 +59,57 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO ts_user;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON SEQUENCES TO ts_user;
 ```
 
-We will not create a table here as we will do that in our code, anyway you should create a test one to check your privileges.
+We will create the database here to import some data to test but if you don't, the application will create it for you
+```sql
+-- DROP TABLES IF EXIST
+DROP TABLE IF EXISTS playlist_songs;
+DROP TABLE IF EXISTS playlists;
+DROP TABLE IF EXISTS songs;
+DROP TABLE IF EXISTS albums;
+DROP TABLE IF EXISTS artists;
+
+-- ARTISTS
+CREATE TABLE artists (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR NOT NULL UNIQUE
+);
+
+-- ALBUMS
+CREATE TABLE albums (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR NOT NULL,
+    artist_id INTEGER NOT NULL,
+    CONSTRAINT fk_album_artist FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE
+);
+
+-- SONGS
+CREATE TABLE songs (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR NOT NULL,
+    artist_id INTEGER NOT NULL,
+    album_id INTEGER,
+    length INT NOT NULL,
+    CONSTRAINT fk_song_artist FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE,
+    CONSTRAINT fk_song_album FOREIGN KEY (album_id) REFERENCES albums(id) ON DELETE SET NULL
+);
+
+-- PLAYLISTS
+CREATE TABLE playlists (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    description VARCHAR
+);
+
+-- PLAYLIST_SONGS (Join Table)
+CREATE TABLE playlist_songs (
+    playlist_id INTEGER NOT NULL,
+    song_id INTEGER NOT NULL,
+    PRIMARY KEY (playlist_id, song_id),
+    CONSTRAINT fk_playlist FOREIGN KEY (playlist_id) REFERENCES playlists(id) ON DELETE CASCADE,
+    CONSTRAINT fk_song FOREIGN KEY (song_id) REFERENCES songs(id) ON DELETE CASCADE
+);
+
+```
 
 ### Spring initializr
 We will visit the page of [Spring initializr](https://start.spring.io/) and fill the options as the image

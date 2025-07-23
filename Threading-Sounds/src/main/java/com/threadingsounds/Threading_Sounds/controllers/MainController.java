@@ -76,4 +76,11 @@ public class MainController {
         songsService.deleteSong(songId);
         return ResponseEntity.ok("Song deleted");
     }
+
+    @GetMapping("/force-error")
+    public String triggerError() {
+        String test = null;
+        return test.toString(); // This throws a NullPointerException
+    }
+
 }
