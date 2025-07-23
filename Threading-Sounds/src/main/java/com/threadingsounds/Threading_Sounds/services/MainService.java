@@ -1,11 +1,13 @@
 package com.threadingsounds.Threading_Sounds.services;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import com.threadingsounds.Threading_Sounds.dto.SongDto;
 import com.threadingsounds.Threading_Sounds.entities.Album;
 import com.threadingsounds.Threading_Sounds.entities.Artist;
 import com.threadingsounds.Threading_Sounds.entities.Song;
@@ -26,7 +28,35 @@ public class MainService {
     private final ArtistsRepository artistRepo;
     private final AlbumsRepository albumRepo;
 
-    // Create song, Album is optional (opcional)
+    public SongDto convertToDto(Song song) {
+        SongDto dto = new SongDto();
+        dto.setTitle(song.getTitle());
+        dto.setLength(song.getLength());
+        dto.setArtistId(song.getArtist().getId());
+        if (song.getAlbum() != null) {
+            dto.setAlbumId(song.getAlbum().getId());
+        }
+        return dto;
+    }
+
+    public Song convertToEntity(SongDto dto) {
+        Artist artist = artistRepo.findById(dto.getArtistId())
+            .orElseThrow(() -> new ResourceNotFoundException("Artist not found with id " + dto.getArtistId()));
+
+        Album album = null;
+        if (dto.getAlbumId() != null) {
+            album = albumRepo.findById(dto.getAlbumId())
+                .orElseThrow(() -> new ResourceNotFoundException("Album not found with id " + dto.getAlbumId()));
+        }
+        Song song = new Song();
+        song.setTitle(dto.getTitle());
+        song.setLength(dto.getLength());
+        song.setArtist(artist);
+        song.setAlbum(album);
+        return song;
+    }
+
+    // Create song, Album is optional
     public Song createSong(Song song, Long artistId, Long albumId) {
         Artist artist = artistRepo.findById(artistId)
             .orElseThrow(() -> new ResourceNotFoundException("Artist with id " + artistId + " does not exist"));
@@ -42,17 +72,17 @@ public class MainService {
     }
 
     // Get all the info from a song
-    public Song getSongById(Long songId) {
-        return songsRepo.findById(songId)
-            .orElseThrow(() -> {
-            logger.error("Song with id " + songId + " not found");
-            return new ResourceNotFoundException("Song with id " + songId + " does not exist");
-        });
+    public SongDto getSongById(Long id) {
+        Song song = songsRepo.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Song not found with id " + id));
+        return convertToDto(song);
     }
 
     // Get all the info from all songs
-    public List<Song> getAllSongs() {
-        return songsRepo.findAll();
+    public List<SongDto> getAllSongs() {
+        return songsRepo.findAll().stream()
+            .map(this::convertToDto)
+            .collect(Collectors.toList());
     }
 
     // Update a song, including artist or and song

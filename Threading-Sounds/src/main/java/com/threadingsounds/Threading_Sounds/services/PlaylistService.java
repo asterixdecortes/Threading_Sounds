@@ -1,5 +1,6 @@
 package com.threadingsounds.Threading_Sounds.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,6 +22,34 @@ public class PlaylistService {
     private final PlaylistsRepository playlistRepo;
     private final SongsRepository songsRepo;
 
+    public PlaylistDto convertToDto(Playlist playlist) {
+        PlaylistDto dto = new PlaylistDto();
+        dto.setName(playlist.getName());
+        dto.setDescription(playlist.getDescription());
+        List<Long> songIds = playlist.getSongs().stream()
+            .map(Song::getId)
+            .collect(Collectors.toList());
+        dto.setSongIds(songIds);
+        return dto;
+    }
+
+    public Playlist convertToEntity(PlaylistDto dto) {
+        Playlist playlist = new Playlist();
+        playlist.setName(dto.getName());
+        playlist.setDescription(dto.getDescription());
+
+        List<Song> songs = new ArrayList<>();
+        if (dto.getSongIds() != null) {
+            for (Long songId : dto.getSongIds()) {
+                Song song = songsRepo.findById(songId)
+                    .orElseThrow(() -> new ResourceNotFoundException("Song not found with id " + songId));
+                songs.add(song);
+            }
+        }
+        playlist.setSongs(songs);
+        return playlist;
+    }
+
     public Playlist createPlaylist(PlaylistDto dto) {
         Playlist playlist = new Playlist();
         playlist.setName(dto.getName());
@@ -37,13 +66,16 @@ public class PlaylistService {
         return playlistRepo.save(playlist);
     }
 
-    public Playlist getPlaylistById(Long id) {
-        return playlistRepo.findById(id)
-            .orElseThrow(() -> new ResourceNotFoundException("Playlist with id " + id + " not found"));
+    public PlaylistDto getPlaylistById(Long id) {
+        Playlist playlist = playlistRepo.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Playlist not found with id " + id));
+        return convertToDto(playlist);
     }
 
-    public List<Playlist> getAllPlaylists() {
-        return playlistRepo.findAll();
+    public List<PlaylistDto> getAllPlaylists() {
+        return playlistRepo.findAll().stream()
+            .map(this::convertToDto)
+            .collect(Collectors.toList());
     }
 
     public Playlist updatePlaylist(Long id, PlaylistDto dto) {
@@ -70,28 +102,27 @@ public class PlaylistService {
         playlistRepo.delete(playlist);
     }
 
-    public Playlist addSongToPlaylist(Long playlistId, Long songId) {
+    public void addSongToPlaylist(Long playlistId, Long songId) {
         Playlist playlist = playlistRepo.findById(playlistId)
-            .orElseThrow(() -> new ResourceNotFoundException("Playlist with id " + playlistId + " not found"));
-
+            .orElseThrow(() -> new ResourceNotFoundException("Playlist not found with id " + playlistId));
         Song song = songsRepo.findById(songId)
-            .orElseThrow(() -> new ResourceNotFoundException("Song with id " + songId + " not found"));
+            .orElseThrow(() -> new ResourceNotFoundException("Song not found with id " + songId));
 
         if (!playlist.getSongs().contains(song)) {
             playlist.getSongs().add(song);
+            playlistRepo.save(playlist);
         }
-
-        return playlistRepo.save(playlist);
     }
 
-    public Playlist removeSongFromPlaylist(Long playlistId, Long songId) {
+    public void removeSongFromPlaylist(Long playlistId, Long songId) {
         Playlist playlist = playlistRepo.findById(playlistId)
-            .orElseThrow(() -> new ResourceNotFoundException("Playlist with id " + playlistId + " not found"));
-
+            .orElseThrow(() -> new ResourceNotFoundException("Playlist not found with id " + playlistId));
         Song song = songsRepo.findById(songId)
-            .orElseThrow(() -> new ResourceNotFoundException("Song with id " + songId + " not found"));
+            .orElseThrow(() -> new ResourceNotFoundException("Song not found with id " + songId));
 
-        playlist.getSongs().remove(song);
-        return playlistRepo.save(playlist);
+        if (playlist.getSongs().contains(song)) {
+            playlist.getSongs().remove(song);
+            playlistRepo.save(playlist);
+        }
     }
 }

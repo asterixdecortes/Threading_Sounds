@@ -33,14 +33,15 @@ public class ArtistController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Artist> getArtistById(@PathVariable Long id) {
-        Artist artist = artistService.getArtistById(id);
+    public ResponseEntity<ArtistDto> getArtistById(@PathVariable Long id) {
+        ArtistDto artist = artistService.getArtistById(id);
         return ResponseEntity.ok(artist);
     }
 
     @GetMapping
-    public ResponseEntity<List<Artist>> getAllArtists() {
-        return ResponseEntity.ok(artistService.getAllArtists());
+    public ResponseEntity<List<ArtistDto>> getAllArtists() {
+        List<ArtistDto> artists = artistService.getAllArtists();
+        return ResponseEntity.ok(artists);
     }
 
     @PutMapping("{id}")

@@ -1,6 +1,7 @@
 package com.threadingsounds.Threading_Sounds.services;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,20 @@ public class ArtistService {
 
     private final ArtistsRepository artistRepo;
 
+    // Entity to DTO
+    public ArtistDto convertToDto(Artist artist) {
+        ArtistDto dto = new ArtistDto();
+        dto.setName(artist.getName());
+        return dto;
+    }
+
+    // DTO to entity
+    public Artist convertToEntity(ArtistDto dto) {
+        Artist artist = new Artist();
+        artist.setName(dto.getName());
+        return artist;
+    }
+
     // Creates and artist
     public Artist createArtist(ArtistDto artistDto) {
         Artist artist = new Artist();
@@ -25,14 +40,17 @@ public class ArtistService {
     }
 
     // Gets all the information from an artist using id
-    public Artist getArtistById(Long id) {
-        return artistRepo.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Artist with id " + id + " not found"));
+    public ArtistDto getArtistById(Long id) {
+        Artist artist = artistRepo.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Artist not found with id " + id));
+        return convertToDto(artist);
     }
 
     // Gets all the information from all the artists
-    public List<Artist> getAllArtists() {
-        return artistRepo.findAll();
+    public List<ArtistDto> getAllArtists() {
+        return artistRepo.findAll().stream()
+            .map(this::convertToDto)
+            .collect(Collectors.toList());
     }
 
     // Changes the info from an artist

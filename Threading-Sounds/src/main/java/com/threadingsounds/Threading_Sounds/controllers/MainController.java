@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -28,8 +26,6 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/songs")
 public class MainController {
-
-    private static final Logger logger = LoggerFactory.getLogger(MainService.class);
 
     private final MainService songsService;
 
@@ -53,14 +49,14 @@ public class MainController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Song> getSongById(@PathVariable("id") Long songId) {
-        Song foundSong = songsService.getSongById(songId);
-        return ResponseEntity.ok(foundSong);
+    public ResponseEntity<SongDto> getSongById(@PathVariable Long id) {
+        SongDto song = songsService.getSongById(id);
+        return ResponseEntity.ok(song);
     }
 
     @GetMapping
-    public ResponseEntity<List<Song>> getAllSongs() {
-        List<Song> songs = songsService.getAllSongs();
+    public ResponseEntity<List<SongDto>> getAllSongs() {
+        List<SongDto> songs = songsService.getAllSongs();
         return ResponseEntity.ok(songs);
     }
 

@@ -2,6 +2,8 @@ package com.threadingsounds.Threading_Sounds.entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,8 +29,10 @@ public class Artist {
     private String name;
 
     @OneToMany(mappedBy = "artist")
+    @JsonIgnore
     private List<Album> albums;
 
     @OneToMany(mappedBy = "artist")
+    @JsonIgnore
     private List<Song> songs;
 }

@@ -1,6 +1,7 @@
 package com.threadingsounds.Threading_Sounds.services;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,24 @@ public class AlbumService {
     private final AlbumsRepository albumRepo;
     private final ArtistsRepository artistRepo;
 
+    public AlbumDto convertToDto(Album album) {
+        AlbumDto dto = new AlbumDto();
+        dto.setTitle(album.getTitle());
+        dto.setArtistId(album.getArtist().getId());
+        return dto;
+    }
+
+    public Album convertToEntity(AlbumDto dto) {
+        Artist artist = artistRepo.findById(dto.getArtistId())
+            .orElseThrow(() -> new ResourceNotFoundException("Artist not found"));
+
+        Album album = new Album();
+        album.setTitle(dto.getTitle());
+        album.setArtist(artist);
+        return album;
+    }
+
+
     public Album createAlbum(AlbumDto albumDto) {
         Artist artist = artistRepo.findById(albumDto.getArtistId())
                 .orElseThrow(() -> new ResourceNotFoundException("Artist with id " + albumDto.getArtistId() + " not found"));
@@ -31,13 +50,16 @@ public class AlbumService {
         return albumRepo.save(album);
     }
 
-    public Album getAlbumById(Long id) {
-        return albumRepo.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Album with id " + id + " not found"));
+    public AlbumDto getAlbumById(Long id) {
+        Album album = albumRepo.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Album not found"));
+        return convertToDto(album);
     }
 
-    public List<Album> getAllAlbums() {
-        return albumRepo.findAll();
+    public List<AlbumDto> getAllAlbums() {
+        return albumRepo.findAll().stream()
+            .map(this::convertToDto)
+            .collect(Collectors.toList());
     }
 
     public Album updateAlbum(Long id, AlbumDto albumDto) {

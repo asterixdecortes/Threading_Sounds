@@ -33,13 +33,15 @@ public class PlaylistController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Playlist> getPlaylistById(@PathVariable Long id) {
-        return ResponseEntity.ok(playlistService.getPlaylistById(id));
+    public ResponseEntity<PlaylistDto> getPlaylistById(@PathVariable Long id) {
+        PlaylistDto playlist = playlistService.getPlaylistById(id);
+        return ResponseEntity.ok(playlist);
     }
 
     @GetMapping
-    public ResponseEntity<List<Playlist>> getAllPlaylists() {
-        return ResponseEntity.ok(playlistService.getAllPlaylists());
+    public ResponseEntity<List<PlaylistDto>> getAllPlaylists() {
+        List<PlaylistDto> playlists = playlistService.getAllPlaylists();
+        return ResponseEntity.ok(playlists);
     }
 
     @PutMapping("{id}")
@@ -54,15 +56,14 @@ public class PlaylistController {
     }
 
     @PutMapping("{playlistId}/addSong/{songId}")
-    public ResponseEntity<Playlist> addSongToPlaylist(@PathVariable Long playlistId, @PathVariable Long songId) {
-        Playlist updated = playlistService.addSongToPlaylist(playlistId, songId);
-        return ResponseEntity.ok(updated);
+    public ResponseEntity<Void> addSongToPlaylist(@PathVariable Long playlistId, @PathVariable Long songId) {
+        playlistService.addSongToPlaylist(playlistId, songId);
+        return ResponseEntity.ok().build();
     }
 
     @PutMapping("{playlistId}/removeSong/{songId}")
-    public ResponseEntity<Playlist> removeSongFromPlaylist(@PathVariable Long playlistId, @PathVariable Long songId) {
-        Playlist updated = playlistService.removeSongFromPlaylist(playlistId, songId);
-        return ResponseEntity.ok(updated);
+    public ResponseEntity<Void> removeSongFromPlaylist(@PathVariable Long playlistId, @PathVariable Long songId) {
+        playlistService.removeSongFromPlaylist(playlistId, songId);
+        return ResponseEntity.noContent().build();
     }
-
 }

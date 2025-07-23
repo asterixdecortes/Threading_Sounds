@@ -32,13 +32,13 @@ public class AlbumController {
         return new ResponseEntity<>(saved, HttpStatus.CREATED);
     }
 
-    @GetMapping("{id}")
-    public ResponseEntity<Album> getAlbumById(@PathVariable Long id) {
+    @GetMapping("/{id}")
+    public ResponseEntity<AlbumDto> getAlbumById(@PathVariable Long id) {
         return ResponseEntity.ok(albumService.getAlbumById(id));
     }
 
     @GetMapping
-    public ResponseEntity<List<Album>> getAllAlbums() {
+    public ResponseEntity<List<AlbumDto>> getAllAlbums() {
         return ResponseEntity.ok(albumService.getAllAlbums());
     }
 
