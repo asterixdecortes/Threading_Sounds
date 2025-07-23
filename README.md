@@ -208,10 +208,66 @@ The second one will manage the colums.
 Interface which inherits from JpaRepository where the majority of the functions needed in the service are declared.
 
 ### Services
+Made a Service with every entity in the DatabaseSchema, at the moment all have more or less the same methods so I will show here only from MainService(SongService is the real meaning).
+
+```java
+public SongDto convertToDto(Song song)
+public Song convertToEntity(SongDto dto)
+```
+These two are conversions between Entities and Data Transfer Object, needed for security reasons and the app working properly
+
+```java
+public Song createSong(Song song, Long artistId, Long albumId)
+```
+Will receive a new song and insert it inside the Database
+
+```java
+public SongDto getSongById(Long id)
+public List<SongDto> getAllSongs()
+```
+Will extract all the info from a song using its id or all the songs in the database
+
+```java
+public Song updateSong(Long songId, Song updatedSong, Long artistId, Long albumId)
+```
+Will edit the data from a song already existing.
+
+```java
+public void deleteSong(Long songId)
+```
+Will delete a song existing from the database
+
+IMPORTANT 
+#### Exceptions
+Every request that does not find the information will throw a made exception 
+```java
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
+public class ResourceNotFoundException extends RuntimeException{
+
+    public ResourceNotFoundException(String message){
+        super(message);
+    }
+}
+```
 
 ### Controllers
+Made a Controller with every entity in the DatabaseSchema, at the moment all have more or less the same methods so I will show here only from MainController(MainController is the real meaning).
+
+They use the same methods as the service and "translate" them to HTTP Mapping.
+
+Every method will return code 200 if ok or its respecting error code. 
+
+This method does not throw exceptions, they are thrown by the service
 
 ### Health Checks
+We will use spring actuator, after addind it in pom.xml, in application.properties, we need to add 
+```properties
+management.endpoints.web.exposure.include=health,info
+management.endpoint.health.show-details=always
+```
+
+This way if you visit http://localhost:8080/actuator/health
+You will receive a json with important information about your backend machine and if the app is running.
 
 ### Testing
 We will add this dependency
@@ -223,7 +279,10 @@ We will add this dependency
 </dependency>
 ```
 
-Then we can start with the tests
+Then we can start with the tests, I included 4 for the Main Service very simple and self explainatory by their names
 
 ### Logging
-Currently only logging on MainService.createSong and MainService.getSongById
+The logs are in file /logs/threadingsounds.log
+
+Currently only logging on MainService.createSong, MainService.getSongById and the whole Spring app
+

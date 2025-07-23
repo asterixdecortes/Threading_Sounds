@@ -1,110 +1,32 @@
-2025-07-23T12:26:05.838+02:00  INFO 53562 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Starting ThreadingSoundsApplicationTests using Java 17.0.15 with PID 53562 (started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T12:26:05.839+02:00 DEBUG 53562 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T12:26:05.841+02:00  INFO 53562 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T12:26:06.882+02:00  INFO 53562 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T12:26:06.966+02:00  INFO 53562 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 4 JPA repository interfaces.
-2025-07-23T12:26:07.317+02:00  WARN 53562 --- [Threading-Sounds] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
-2025-07-23T12:26:07.362+02:00  INFO 53562 --- [Threading-Sounds] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2025-07-23T16:52:10.192+02:00  INFO 14512 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Starting ThreadingSoundsApplication using Java 17.0.15 with PID 14512 (/home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds/target/classes started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
+2025-07-23T16:52:10.193+02:00 DEBUG 14512 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-23T16:52:10.194+02:00  INFO 14512 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-23T16:52:10.751+02:00  INFO 14512 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-23T16:52:10.791+02:00  INFO 14512 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 4 JPA repository interfaces.
+2025-07-23T16:52:11.075+02:00  INFO 14512 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-23T16:52:11.084+02:00  INFO 14512 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-23T16:52:11.085+02:00  INFO 14512 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-23T16:52:11.117+02:00  INFO 14512 --- [Threading-Sounds] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-23T16:52:11.118+02:00  INFO 14512 --- [Threading-Sounds] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 896 ms
+2025-07-23T16:52:11.238+02:00  WARN 14512 --- [Threading-Sounds] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
+2025-07-23T16:52:11.240+02:00  INFO 14512 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-07-23T16:52:11.258+02:00  INFO 14512 --- [Threading-Sounds] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-07-23T12:26:07.384+02:00 ERROR 53562 --- [Threading-Sounds] [main] o.s.boot.SpringApplication               : Application run failed
+2025-07-23T16:52:11.268+02:00 ERROR 14512 --- [Threading-Sounds] [main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.8.jar:6.2.8]
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.3.jar:3.5.3]
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.3.jar:3.5.3]
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.3.jar:3.5.3]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.3.jar:3.5.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144) ~[spring-boot-test-3.5.3.jar:3.5.3]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.8.jar:6.2.8]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.8.jar:6.2.8]
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.5.3.jar:3.5.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563) ~[spring-boot-test-3.5.3.jar:3.5.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144) ~[spring-boot-test-3.5.3.jar:3.5.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110) ~[spring-boot-test-3.5.3.jar:3.5.3]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:194) ~[surefire-junit-platform-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.3.jar:3.5.3]
+	at com.threadingsounds.Threading_Sounds.ThreadingSoundsApplication.main(ThreadingSoundsApplication.java:13) ~[classes/:na]
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.8.jar:6.2.8]
@@ -117,7 +39,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.8.jar:6.2.8]
-	... 94 common frames omitted
+	... 10 common frames omitted
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.8.jar:6.2.8]
@@ -133,13 +55,13 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.8.jar:6.2.8]
-	... 104 common frames omitted
+	... 20 common frames omitted
 Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.8.jar:6.2.8]
-	... 117 common frames omitted
+	... 33 common frames omitted
 Caused by: java.lang.IllegalArgumentException: 'url' must start with "jdbc"
 	at org.springframework.util.Assert.isTrue(Assert.java:116) ~[spring-core-6.2.8.jar:6.2.8]
 	at org.springframework.boot.jdbc.DatabaseDriver.fromJdbcUrl(DatabaseDriver.java:310) ~[spring-boot-3.5.3.jar:3.5.3]
@@ -153,172 +75,26 @@ Caused by: java.lang.IllegalArgumentException: 'url' must start with "jdbc"
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.8.jar:6.2.8]
-	... 120 common frames omitted
+	... 36 common frames omitted
 
-2025-07-23T12:26:07.397+02:00  WARN 53562 --- [Threading-Sounds] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.threadingsounds.Threading_Sounds.ThreadingSoundsApplicationTests@5ac53c06]
-
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@489bc8fd testClass = com.threadingsounds.Threading_Sounds.ThreadingSoundsApplicationTests, locations = [], classes = [com.threadingsounds.Threading_Sounds.ThreadingSoundsApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@24569dba, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7188af83, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@433defed, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@71075444, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@4d1bf319, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@5c7933ad, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@d24edc21], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:194) ~[surefire-junit-platform-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.3.jar:3.5.3]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.3.jar:3.5.3]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:328) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.8.jar:6.2.8]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.8.jar:6.2.8]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.3.jar:3.5.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.3.jar:3.5.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.3.jar:3.5.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144) ~[spring-boot-test-3.5.3.jar:3.5.3]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.8.jar:6.2.8]
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.8.jar:6.2.8]
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.5.3.jar:3.5.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563) ~[spring-boot-test-3.5.3.jar:3.5.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144) ~[spring-boot-test-3.5.3.jar:3.5.3]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110) ~[spring-boot-test-3.5.3.jar:3.5.3]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.8.jar:6.2.8]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.8.jar:6.2.8]
-	... 79 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-6.2.8.jar:6.2.8]
-	... 94 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1683) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.8.jar:6.2.8]
-	... 104 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: 'url' must start with "jdbc"
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.8.jar:6.2.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.8.jar:6.2.8]
-	... 117 common frames omitted
-Caused by: java.lang.IllegalArgumentException: 'url' must start with "jdbc"
-	at org.springframework.util.Assert.isTrue(Assert.java:116) ~[spring-core-6.2.8.jar:6.2.8]
-	at org.springframework.boot.jdbc.DatabaseDriver.fromJdbcUrl(DatabaseDriver.java:310) ~[spring-boot-3.5.3.jar:3.5.3]
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.findDriverClassName(DataSourceProperties.java:189) ~[spring-boot-autoconfigure-3.5.3.jar:3.5.3]
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:174) ~[spring-boot-autoconfigure-3.5.3.jar:3.5.3]
-	at org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:49) ~[spring-boot-autoconfigure-3.5.3.jar:3.5.3]
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:62) ~[spring-boot-autoconfigure-3.5.3.jar:3.5.3]
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:127) ~[spring-boot-autoconfigure-3.5.3.jar:3.5.3]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.8.jar:6.2.8]
-	... 120 common frames omitted
-
-2025-07-23T12:56:24.870+02:00  INFO 62716 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Starting ThreadingSoundsApplicationTests using Java 17.0.15 with PID 62716 (started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T12:56:24.871+02:00 DEBUG 62716 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T12:56:24.872+02:00  INFO 62716 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T12:56:25.939+02:00  INFO 62716 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T12:56:26.014+02:00  INFO 62716 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
-2025-07-23T12:56:26.475+02:00  INFO 62716 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T12:56:26.537+02:00  INFO 62716 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T12:56:26.575+02:00  INFO 62716 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T12:56:26.955+02:00  INFO 62716 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T12:56:26.988+02:00  INFO 62716 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T12:56:27.378+02:00  INFO 62716 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@40738846
-2025-07-23T12:56:27.381+02:00  INFO 62716 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T12:56:27.470+02:00  INFO 62716 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-07-23T16:53:21.540+02:00  INFO 15105 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Starting ThreadingSoundsApplication using Java 17.0.15 with PID 15105 (/home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds/target/classes started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
+2025-07-23T16:53:21.542+02:00 DEBUG 15105 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-23T16:53:21.542+02:00  INFO 15105 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-23T16:53:22.097+02:00  INFO 15105 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-23T16:53:22.138+02:00  INFO 15105 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 4 JPA repository interfaces.
+2025-07-23T16:53:22.411+02:00  INFO 15105 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-23T16:53:22.420+02:00  INFO 15105 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-23T16:53:22.420+02:00  INFO 15105 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-23T16:53:22.451+02:00  INFO 15105 --- [Threading-Sounds] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-23T16:53:22.451+02:00  INFO 15105 --- [Threading-Sounds] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 880 ms
+2025-07-23T16:53:22.618+02:00  INFO 15105 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-23T16:53:22.646+02:00  INFO 15105 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-23T16:53:22.665+02:00  INFO 15105 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-23T16:53:22.821+02:00  INFO 15105 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-23T16:53:22.838+02:00  INFO 15105 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-23T16:53:23.026+02:00  INFO 15105 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25464154
+2025-07-23T16:53:23.027+02:00  INFO 15105 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-23T16:53:23.088+02:00  INFO 15105 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 17.5
@@ -326,541 +102,12 @@ Caused by: java.lang.IllegalArgumentException: 'url' must start with "jdbc"
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-07-23T12:56:28.590+02:00  INFO 62716 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T12:56:29.149+02:00  INFO 62716 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T12:56:29.507+02:00  WARN 62716 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T12:56:30.159+02:00  INFO 62716 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T12:56:30.264+02:00  INFO 62716 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Started ThreadingSoundsApplicationTests in 5.791 seconds (process running for 6.978)
-2025-07-23T12:56:30.841+02:00  INFO 62716 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T12:56:30.844+02:00  INFO 62716 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T12:56:30.858+02:00  INFO 62716 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T12:57:07.139+02:00  INFO 63236 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Starting ThreadingSoundsApplication using Java 17.0.15 with PID 63236 (/home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds/target/classes started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T12:57:07.141+02:00 DEBUG 63236 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T12:57:07.142+02:00  INFO 63236 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T12:57:08.045+02:00  INFO 63236 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T12:57:08.109+02:00  INFO 63236 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
-2025-07-23T12:57:08.580+02:00  INFO 63236 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-07-23T12:57:08.595+02:00  INFO 63236 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-23T12:57:08.596+02:00  INFO 63236 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-23T12:57:08.647+02:00  INFO 63236 --- [Threading-Sounds] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-23T12:57:08.648+02:00  INFO 63236 --- [Threading-Sounds] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1454 ms
-2025-07-23T12:57:08.948+02:00  INFO 63236 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T12:57:08.997+02:00  INFO 63236 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T12:57:09.029+02:00  INFO 63236 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T12:57:09.291+02:00  INFO 63236 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T12:57:09.319+02:00  INFO 63236 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T12:57:09.629+02:00  INFO 63236 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2493eec6
-2025-07-23T12:57:09.631+02:00  INFO 63236 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T12:57:09.710+02:00  INFO 63236 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T12:57:10.646+02:00  INFO 63236 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T12:57:11.102+02:00  INFO 63236 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T12:57:11.353+02:00  WARN 63236 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T12:57:11.814+02:00  INFO 63236 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T12:57:11.899+02:00  INFO 63236 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-07-23T12:57:11.922+02:00  INFO 63236 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Started ThreadingSoundsApplication in 5.312 seconds (process running for 5.634)
-2025-07-23T12:57:21.272+02:00  INFO 63236 --- [Threading-Sounds] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-23T12:57:21.273+02:00  INFO 63236 --- [Threading-Sounds] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-23T12:57:21.275+02:00  INFO 63236 --- [Threading-Sounds] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-07-23T12:59:28.813+02:00  INFO 63236 --- [Threading-Sounds] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-23T12:59:28.816+02:00  INFO 63236 --- [Threading-Sounds] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-23T12:59:28.822+02:00  INFO 63236 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T12:59:28.826+02:00  INFO 63236 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T12:59:28.836+02:00  INFO 63236 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T12:59:39.062+02:00  INFO 64381 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Starting ThreadingSoundsApplicationTests using Java 17.0.15 with PID 64381 (started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T12:59:39.064+02:00 DEBUG 64381 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T12:59:39.066+02:00  INFO 64381 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T12:59:40.146+02:00  INFO 64381 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T12:59:40.216+02:00  INFO 64381 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
-2025-07-23T12:59:40.686+02:00  INFO 64381 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T12:59:40.742+02:00  INFO 64381 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T12:59:40.780+02:00  INFO 64381 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T12:59:41.137+02:00  INFO 64381 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T12:59:41.172+02:00  INFO 64381 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T12:59:41.520+02:00  INFO 64381 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e4f2300
-2025-07-23T12:59:41.522+02:00  INFO 64381 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T12:59:41.607+02:00  INFO 64381 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T12:59:42.684+02:00  INFO 64381 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T12:59:43.105+02:00  INFO 64381 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T12:59:43.477+02:00  WARN 64381 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T12:59:44.200+02:00  INFO 64381 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T12:59:44.289+02:00  INFO 64381 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Started ThreadingSoundsApplicationTests in 5.71 seconds (process running for 6.982)
-2025-07-23T12:59:44.861+02:00  INFO 64381 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T12:59:44.865+02:00  INFO 64381 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T12:59:44.882+02:00  INFO 64381 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T13:00:05.127+02:00  INFO 64789 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Starting ThreadingSoundsApplication using Java 17.0.15 with PID 64789 (/home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds/target/classes started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T13:00:05.129+02:00 DEBUG 64789 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T13:00:05.130+02:00  INFO 64789 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T13:00:06.077+02:00  INFO 64789 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T13:00:06.141+02:00  INFO 64789 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
-2025-07-23T13:00:06.614+02:00  INFO 64789 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-07-23T13:00:06.629+02:00  INFO 64789 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-23T13:00:06.630+02:00  INFO 64789 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-23T13:00:06.682+02:00  INFO 64789 --- [Threading-Sounds] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-23T13:00:06.683+02:00  INFO 64789 --- [Threading-Sounds] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1502 ms
-2025-07-23T13:00:06.961+02:00  INFO 64789 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T13:00:07.010+02:00  INFO 64789 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T13:00:07.044+02:00  INFO 64789 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T13:00:07.311+02:00  INFO 64789 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T13:00:07.341+02:00  INFO 64789 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T13:00:07.644+02:00  INFO 64789 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3722f39d
-2025-07-23T13:00:07.646+02:00  INFO 64789 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T13:00:07.721+02:00  INFO 64789 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T13:00:08.692+02:00  INFO 64789 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T13:00:09.117+02:00  INFO 64789 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:00:09.405+02:00  WARN 64789 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T13:00:09.851+02:00  INFO 64789 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T13:00:09.926+02:00  INFO 64789 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-07-23T13:00:09.955+02:00  INFO 64789 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Started ThreadingSoundsApplication in 5.342 seconds (process running for 5.677)
-2025-07-23T13:00:17.400+02:00  INFO 64789 --- [Threading-Sounds] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-23T13:00:17.401+02:00  INFO 64789 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-23T13:00:17.403+02:00  INFO 64789 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-07-23T13:01:05.094+02:00  INFO 64789 --- [Threading-Sounds] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-23T13:01:05.096+02:00  INFO 64789 --- [Threading-Sounds] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-23T13:01:05.101+02:00  INFO 64789 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:01:05.103+02:00  INFO 64789 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T13:01:05.111+02:00  INFO 64789 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T13:01:17.001+02:00  INFO 65457 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Starting ThreadingSoundsApplicationTests using Java 17.0.15 with PID 65457 (started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T13:01:17.003+02:00 DEBUG 65457 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T13:01:17.004+02:00  INFO 65457 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T13:01:18.124+02:00  INFO 65457 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T13:01:18.198+02:00  INFO 65457 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 4 JPA repository interfaces.
-2025-07-23T13:01:18.649+02:00  INFO 65457 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T13:01:18.700+02:00  INFO 65457 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T13:01:18.749+02:00  INFO 65457 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T13:01:19.127+02:00  INFO 65457 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T13:01:19.160+02:00  INFO 65457 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T13:01:19.518+02:00  INFO 65457 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1f5d7fd5
-2025-07-23T13:01:19.520+02:00  INFO 65457 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T13:01:19.607+02:00  INFO 65457 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T13:01:20.658+02:00  INFO 65457 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T13:01:21.089+02:00  INFO 65457 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:01:21.456+02:00  WARN 65457 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T13:01:22.142+02:00  INFO 65457 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T13:01:22.243+02:00  INFO 65457 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Started ThreadingSoundsApplicationTests in 5.659 seconds (process running for 6.878)
-2025-07-23T13:01:22.814+02:00  INFO 65457 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:01:22.818+02:00  INFO 65457 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T13:01:22.833+02:00  INFO 65457 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T13:01:30.817+02:00  INFO 65789 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Starting ThreadingSoundsApplication using Java 17.0.15 with PID 65789 (/home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds/target/classes started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T13:01:30.819+02:00 DEBUG 65789 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T13:01:30.820+02:00  INFO 65789 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T13:01:31.759+02:00  INFO 65789 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T13:01:31.822+02:00  INFO 65789 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
-2025-07-23T13:01:32.281+02:00  INFO 65789 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-07-23T13:01:32.297+02:00  INFO 65789 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-23T13:01:32.297+02:00  INFO 65789 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-23T13:01:32.365+02:00  INFO 65789 --- [Threading-Sounds] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-23T13:01:32.366+02:00  INFO 65789 --- [Threading-Sounds] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1491 ms
-2025-07-23T13:01:32.658+02:00  INFO 65789 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T13:01:32.706+02:00  INFO 65789 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T13:01:32.741+02:00  INFO 65789 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T13:01:33.018+02:00  INFO 65789 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T13:01:33.049+02:00  INFO 65789 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T13:01:33.363+02:00  INFO 65789 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@732d078d
-2025-07-23T13:01:33.364+02:00  INFO 65789 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T13:01:33.439+02:00  INFO 65789 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T13:01:34.478+02:00  INFO 65789 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T13:01:34.908+02:00  INFO 65789 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:01:35.147+02:00  WARN 65789 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T13:01:35.612+02:00  INFO 65789 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T13:01:35.701+02:00  INFO 65789 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-07-23T13:01:35.728+02:00  INFO 65789 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Started ThreadingSoundsApplication in 5.479 seconds (process running for 5.829)
-2025-07-23T13:01:44.049+02:00  INFO 65789 --- [Threading-Sounds] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-23T13:01:44.050+02:00  INFO 65789 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-23T13:01:44.051+02:00  INFO 65789 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-07-23T13:01:44.289+02:00  WARN 65789 --- [Threading-Sounds] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
-2025-07-23T13:01:44.290+02:00  WARN 65789 --- [Threading-Sounds] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
-2025-07-23T13:02:07.394+02:00  WARN 65789 --- [Threading-Sounds] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
-2025-07-23T13:02:07.394+02:00  WARN 65789 --- [Threading-Sounds] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
-2025-07-23T13:19:36.641+02:00  INFO 65789 --- [Threading-Sounds] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-23T13:19:36.655+02:00  INFO 65789 --- [Threading-Sounds] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-23T13:19:36.659+02:00  INFO 65789 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:19:36.662+02:00  INFO 65789 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T13:19:36.671+02:00  INFO 65789 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T13:19:47.788+02:00  INFO 72523 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Starting ThreadingSoundsApplicationTests using Java 17.0.15 with PID 72523 (started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T13:19:47.790+02:00 DEBUG 72523 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T13:19:47.792+02:00  INFO 72523 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T13:19:48.881+02:00  INFO 72523 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T13:19:48.949+02:00  INFO 72523 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
-2025-07-23T13:19:49.469+02:00  INFO 72523 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T13:19:49.519+02:00  INFO 72523 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T13:19:49.572+02:00  INFO 72523 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T13:19:49.936+02:00  INFO 72523 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T13:19:49.972+02:00  INFO 72523 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T13:19:50.337+02:00  INFO 72523 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e91facf
-2025-07-23T13:19:50.339+02:00  INFO 72523 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T13:19:50.423+02:00  INFO 72523 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T13:19:51.541+02:00  INFO 72523 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T13:19:51.971+02:00  INFO 72523 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:19:52.341+02:00  WARN 72523 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T13:19:52.995+02:00  INFO 72523 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T13:19:53.094+02:00  INFO 72523 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Started ThreadingSoundsApplicationTests in 5.745 seconds (process running for 7.002)
-2025-07-23T13:19:53.679+02:00  INFO 72523 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:19:53.683+02:00  INFO 72523 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T13:19:53.707+02:00  INFO 72523 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T13:20:02.594+02:00  INFO 72861 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Starting ThreadingSoundsApplication using Java 17.0.15 with PID 72861 (/home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds/target/classes started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T13:20:02.596+02:00 DEBUG 72861 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T13:20:02.597+02:00  INFO 72861 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T13:20:03.547+02:00  INFO 72861 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T13:20:03.614+02:00  INFO 72861 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
-2025-07-23T13:20:04.094+02:00  INFO 72861 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-07-23T13:20:04.110+02:00  INFO 72861 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-23T13:20:04.111+02:00  INFO 72861 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-23T13:20:04.165+02:00  INFO 72861 --- [Threading-Sounds] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-23T13:20:04.166+02:00  INFO 72861 --- [Threading-Sounds] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1516 ms
-2025-07-23T13:20:04.441+02:00  INFO 72861 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T13:20:04.489+02:00  INFO 72861 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T13:20:04.520+02:00  INFO 72861 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T13:20:04.782+02:00  INFO 72861 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T13:20:04.811+02:00  INFO 72861 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T13:20:05.118+02:00  INFO 72861 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a42019a
-2025-07-23T13:20:05.119+02:00  INFO 72861 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T13:20:05.196+02:00  INFO 72861 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T13:20:06.151+02:00  INFO 72861 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T13:20:06.555+02:00  INFO 72861 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:20:06.822+02:00  WARN 72861 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T13:20:07.260+02:00  INFO 72861 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T13:20:07.336+02:00  INFO 72861 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-07-23T13:20:07.359+02:00  INFO 72861 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Started ThreadingSoundsApplication in 5.3 seconds (process running for 5.612)
-2025-07-23T13:20:57.120+02:00  INFO 72861 --- [Threading-Sounds] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-23T13:20:57.120+02:00  INFO 72861 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-23T13:20:57.122+02:00  INFO 72861 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-07-23T13:20:57.371+02:00  WARN 72861 --- [Threading-Sounds] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
-2025-07-23T13:20:57.372+02:00  WARN 72861 --- [Threading-Sounds] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
-2025-07-23T13:23:06.884+02:00  INFO 72861 --- [Threading-Sounds] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-23T13:23:06.886+02:00  INFO 72861 --- [Threading-Sounds] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-23T13:23:06.891+02:00  INFO 72861 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:23:06.893+02:00  INFO 72861 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T13:23:06.902+02:00  INFO 72861 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T13:23:17.472+02:00  INFO 74324 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Starting ThreadingSoundsApplicationTests using Java 17.0.15 with PID 74324 (started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T13:23:17.474+02:00 DEBUG 74324 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T13:23:17.475+02:00  INFO 74324 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T13:23:18.688+02:00  INFO 74324 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T13:23:18.773+02:00  INFO 74324 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 4 JPA repository interfaces.
-2025-07-23T13:23:19.334+02:00  INFO 74324 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T13:23:19.405+02:00  INFO 74324 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T13:23:19.445+02:00  INFO 74324 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T13:23:19.794+02:00  INFO 74324 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T13:23:19.833+02:00  INFO 74324 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T13:23:20.262+02:00  INFO 74324 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@192f5f39
-2025-07-23T13:23:20.264+02:00  INFO 74324 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T13:23:20.357+02:00  INFO 74324 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T13:23:21.456+02:00  INFO 74324 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T13:23:21.920+02:00  INFO 74324 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:23:22.267+02:00  WARN 74324 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T13:23:23.085+02:00  INFO 74324 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T13:23:23.257+02:00  INFO 74324 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Started ThreadingSoundsApplicationTests in 6.265 seconds (process running for 7.587)
-2025-07-23T13:23:23.863+02:00  INFO 74324 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:23:23.866+02:00  INFO 74324 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T13:23:23.882+02:00  INFO 74324 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T13:24:00.624+02:00  INFO 74830 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Starting ThreadingSoundsApplication using Java 17.0.15 with PID 74830 (/home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds/target/classes started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T13:24:00.626+02:00 DEBUG 74830 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T13:24:00.627+02:00  INFO 74830 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T13:24:01.734+02:00  INFO 74830 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T13:24:01.815+02:00  INFO 74830 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 4 JPA repository interfaces.
-2025-07-23T13:24:02.341+02:00  INFO 74830 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-07-23T13:24:02.357+02:00  INFO 74830 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-23T13:24:02.357+02:00  INFO 74830 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-23T13:24:02.411+02:00  INFO 74830 --- [Threading-Sounds] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-23T13:24:02.412+02:00  INFO 74830 --- [Threading-Sounds] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1724 ms
-2025-07-23T13:24:02.710+02:00  INFO 74830 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T13:24:02.766+02:00  INFO 74830 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T13:24:02.799+02:00  INFO 74830 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T13:24:03.084+02:00  INFO 74830 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T13:24:03.114+02:00  INFO 74830 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T13:24:03.440+02:00  INFO 74830 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6fc0e448
-2025-07-23T13:24:03.442+02:00  INFO 74830 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T13:24:03.518+02:00  INFO 74830 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T13:24:04.592+02:00  INFO 74830 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T13:24:05.081+02:00  INFO 74830 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:24:05.349+02:00  WARN 74830 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T13:24:05.868+02:00  INFO 74830 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T13:24:05.955+02:00  INFO 74830 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-07-23T13:24:05.985+02:00  INFO 74830 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Started ThreadingSoundsApplication in 5.96 seconds (process running for 6.338)
-2025-07-23T13:24:47.869+02:00  INFO 74830 --- [Threading-Sounds] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-23T13:24:47.869+02:00  INFO 74830 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-23T13:24:47.871+02:00  INFO 74830 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-07-23T13:24:48.122+02:00  WARN 74830 --- [Threading-Sounds] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)
-2025-07-23T13:24:48.123+02:00  WARN 74830 --- [Threading-Sounds] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
-2025-07-23T13:25:06.684+02:00  INFO 74830 --- [Threading-Sounds] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-23T13:25:06.687+02:00  INFO 74830 --- [Threading-Sounds] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-23T13:25:06.693+02:00  INFO 74830 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:25:06.695+02:00  INFO 74830 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T13:25:06.703+02:00  INFO 74830 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T13:30:47.118+02:00  INFO 77626 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Starting ThreadingSoundsApplicationTests using Java 17.0.15 with PID 77626 (started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T13:30:47.131+02:00 DEBUG 77626 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T13:30:47.132+02:00  INFO 77626 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T13:30:48.295+02:00  INFO 77626 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T13:30:48.375+02:00  INFO 77626 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
-2025-07-23T13:30:48.889+02:00  INFO 77626 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T13:30:48.969+02:00  INFO 77626 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T13:30:49.021+02:00  INFO 77626 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T13:30:49.419+02:00  INFO 77626 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T13:30:49.457+02:00  INFO 77626 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T13:30:49.858+02:00  INFO 77626 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@be616f0
-2025-07-23T13:30:49.860+02:00  INFO 77626 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T13:30:49.944+02:00  INFO 77626 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T13:30:51.206+02:00  INFO 77626 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T13:30:51.670+02:00  INFO 77626 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:30:52.074+02:00  WARN 77626 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T13:30:52.826+02:00  INFO 77626 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T13:30:52.942+02:00  INFO 77626 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Started ThreadingSoundsApplicationTests in 6.299 seconds (process running for 7.6)
-2025-07-23T13:30:53.511+02:00  INFO 77626 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:30:53.515+02:00  INFO 77626 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T13:30:53.535+02:00  INFO 77626 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T13:32:27.970+02:00  INFO 78479 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Starting ThreadingSoundsApplication using Java 17.0.15 with PID 78479 (/home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds/target/classes started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T13:32:27.972+02:00 DEBUG 78479 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T13:32:27.973+02:00  INFO 78479 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T13:32:29.036+02:00  INFO 78479 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T13:32:29.115+02:00  INFO 78479 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
-2025-07-23T13:32:29.644+02:00  INFO 78479 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-07-23T13:32:29.659+02:00  INFO 78479 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-23T13:32:29.660+02:00  INFO 78479 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-23T13:32:29.712+02:00  INFO 78479 --- [Threading-Sounds] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-23T13:32:29.713+02:00  INFO 78479 --- [Threading-Sounds] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1685 ms
-2025-07-23T13:32:29.998+02:00  INFO 78479 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T13:32:30.045+02:00  INFO 78479 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T13:32:30.077+02:00  INFO 78479 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T13:32:30.349+02:00  INFO 78479 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T13:32:30.378+02:00  INFO 78479 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T13:32:30.684+02:00  INFO 78479 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ce47652
-2025-07-23T13:32:30.686+02:00  INFO 78479 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T13:32:30.760+02:00  INFO 78479 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T13:32:31.758+02:00  INFO 78479 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T13:32:32.181+02:00  INFO 78479 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:32:32.440+02:00  WARN 78479 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T13:32:32.907+02:00  INFO 78479 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T13:32:32.985+02:00  INFO 78479 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-07-23T13:32:33.011+02:00  INFO 78479 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Started ThreadingSoundsApplication in 5.627 seconds (process running for 5.989)
-2025-07-23T13:32:36.911+02:00  INFO 78479 --- [Threading-Sounds] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-23T13:32:36.911+02:00  INFO 78479 --- [Threading-Sounds] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-23T13:32:36.913+02:00  INFO 78479 --- [Threading-Sounds] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-07-23T13:48:52.513+02:00  INFO 78479 --- [Threading-Sounds] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-23T13:48:52.516+02:00  INFO 78479 --- [Threading-Sounds] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-23T13:48:52.521+02:00  INFO 78479 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:48:52.524+02:00  INFO 78479 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T13:48:52.534+02:00  INFO 78479 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T13:49:02.895+02:00  INFO 84885 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Starting ThreadingSoundsApplicationTests using Java 17.0.15 with PID 84885 (started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T13:49:02.897+02:00 DEBUG 84885 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T13:49:02.898+02:00  INFO 84885 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T13:49:04.190+02:00  INFO 84885 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T13:49:04.276+02:00  INFO 84885 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 4 JPA repository interfaces.
-2025-07-23T13:49:04.813+02:00  INFO 84885 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T13:49:04.887+02:00  INFO 84885 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T13:49:04.938+02:00  INFO 84885 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T13:49:05.310+02:00  INFO 84885 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T13:49:05.344+02:00  INFO 84885 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T13:49:05.746+02:00  INFO 84885 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5891b7c5
-2025-07-23T13:49:05.748+02:00  INFO 84885 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T13:49:05.852+02:00  INFO 84885 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T13:49:07.029+02:00  INFO 84885 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T13:49:07.451+02:00  INFO 84885 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:49:07.816+02:00  WARN 84885 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T13:49:08.487+02:00  INFO 84885 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T13:49:08.573+02:00  INFO 84885 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplicationTests    : Started ThreadingSoundsApplicationTests in 6.151 seconds (process running for 7.361)
-2025-07-23T13:49:09.121+02:00  INFO 84885 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:49:09.127+02:00  INFO 84885 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T13:49:09.145+02:00  INFO 84885 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T13:49:44.730+02:00  INFO 85388 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Starting ThreadingSoundsApplication using Java 17.0.15 with PID 85388 (/home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds/target/classes started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T13:49:44.733+02:00 DEBUG 85388 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T13:49:44.734+02:00  INFO 85388 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T13:49:45.719+02:00  INFO 85388 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T13:49:45.785+02:00  INFO 85388 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
-2025-07-23T13:49:46.255+02:00  INFO 85388 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-07-23T13:49:46.270+02:00  INFO 85388 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-23T13:49:46.271+02:00  INFO 85388 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-23T13:49:46.324+02:00  INFO 85388 --- [Threading-Sounds] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-23T13:49:46.325+02:00  INFO 85388 --- [Threading-Sounds] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1535 ms
-2025-07-23T13:49:46.609+02:00  INFO 85388 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T13:49:46.656+02:00  INFO 85388 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T13:49:46.688+02:00  INFO 85388 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T13:49:46.957+02:00  INFO 85388 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T13:49:46.986+02:00  INFO 85388 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T13:49:47.295+02:00  INFO 85388 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30fa8a6b
-2025-07-23T13:49:47.297+02:00  INFO 85388 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T13:49:47.374+02:00  INFO 85388 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T13:49:48.339+02:00  INFO 85388 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T13:49:48.752+02:00  INFO 85388 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T13:49:49.015+02:00  WARN 85388 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T13:49:49.497+02:00  INFO 85388 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T13:49:49.575+02:00  INFO 85388 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-07-23T13:49:49.598+02:00  INFO 85388 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Started ThreadingSoundsApplication in 5.442 seconds (process running for 5.77)
-2025-07-23T13:49:56.875+02:00  INFO 85388 --- [Threading-Sounds] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-23T13:49:56.875+02:00  INFO 85388 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-23T13:49:56.877+02:00  INFO 85388 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-07-23T13:51:33.721+02:00  WARN 85388 --- [Threading-Sounds] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
-2025-07-23T13:52:29.940+02:00  WARN 85388 --- [Threading-Sounds] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
-2025-07-23T13:52:40.650+02:00  WARN 85388 --- [Threading-Sounds] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
-2025-07-23T15:40:44.640+02:00  INFO 85388 --- [Threading-Sounds] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-23T15:40:44.643+02:00  INFO 85388 --- [Threading-Sounds] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-23T15:40:44.648+02:00  INFO 85388 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T15:40:44.651+02:00  INFO 85388 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T15:40:44.658+02:00  INFO 85388 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T16:02:22.744+02:00  INFO 134297 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Starting ThreadingSoundsApplication using Java 17.0.15 with PID 134297 (/home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds/target/classes started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T16:02:22.746+02:00 DEBUG 134297 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T16:02:22.748+02:00  INFO 134297 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T16:02:23.732+02:00  INFO 134297 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T16:02:23.800+02:00  INFO 134297 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
-2025-07-23T16:02:24.275+02:00  INFO 134297 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-07-23T16:02:24.290+02:00  INFO 134297 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-23T16:02:24.290+02:00  INFO 134297 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-23T16:02:24.342+02:00  INFO 134297 --- [Threading-Sounds] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-23T16:02:24.342+02:00  INFO 134297 --- [Threading-Sounds] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1540 ms
-2025-07-23T16:02:24.625+02:00  INFO 134297 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T16:02:24.675+02:00  INFO 134297 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T16:02:24.710+02:00  INFO 134297 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T16:02:24.988+02:00  INFO 134297 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T16:02:25.017+02:00  INFO 134297 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T16:02:25.366+02:00  INFO 134297 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31b6fb14
-2025-07-23T16:02:25.368+02:00  INFO 134297 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T16:02:25.448+02:00  INFO 134297 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T16:02:26.453+02:00  INFO 134297 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T16:02:26.864+02:00  INFO 134297 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T16:02:27.123+02:00  WARN 134297 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T16:02:27.602+02:00  INFO 134297 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T16:02:27.686+02:00  INFO 134297 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-07-23T16:02:27.713+02:00  INFO 134297 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Started ThreadingSoundsApplication in 5.528 seconds (process running for 5.858)
-2025-07-23T16:02:55.945+02:00  INFO 134297 --- [Threading-Sounds] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-23T16:02:55.945+02:00  INFO 134297 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-23T16:02:55.947+02:00  INFO 134297 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-07-23T16:19:01.385+02:00  INFO 134297 --- [Threading-Sounds] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-23T16:19:01.388+02:00  INFO 134297 --- [Threading-Sounds] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-23T16:19:01.393+02:00  INFO 134297 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T16:19:01.396+02:00  INFO 134297 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T16:19:01.411+02:00  INFO 134297 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-23T16:19:25.347+02:00  INFO 140917 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Starting ThreadingSoundsApplication using Java 17.0.15 with PID 140917 (/home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds/target/classes started by asterixdecortes in /home/asterixdecortes/Documentos/Threading_Sounds/Threading-Sounds)
-2025-07-23T16:19:25.349+02:00 DEBUG 140917 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-23T16:19:25.350+02:00  INFO 140917 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-07-23T16:19:26.312+02:00  INFO 140917 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-23T16:19:26.378+02:00  INFO 140917 --- [Threading-Sounds] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
-2025-07-23T16:19:26.857+02:00  INFO 140917 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-07-23T16:19:26.873+02:00  INFO 140917 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-23T16:19:26.874+02:00  INFO 140917 --- [Threading-Sounds] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-23T16:19:26.925+02:00  INFO 140917 --- [Threading-Sounds] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-23T16:19:26.926+02:00  INFO 140917 --- [Threading-Sounds] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1521 ms
-2025-07-23T16:19:27.202+02:00  INFO 140917 --- [Threading-Sounds] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-23T16:19:27.247+02:00  INFO 140917 --- [Threading-Sounds] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-23T16:19:27.280+02:00  INFO 140917 --- [Threading-Sounds] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-23T16:19:27.545+02:00  INFO 140917 --- [Threading-Sounds] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-23T16:19:27.575+02:00  INFO 140917 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-23T16:19:27.883+02:00  INFO 140917 --- [Threading-Sounds] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@26270b77
-2025-07-23T16:19:27.885+02:00  INFO 140917 --- [Threading-Sounds] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-23T16:19:27.959+02:00  INFO 140917 --- [Threading-Sounds] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.5
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-07-23T16:19:28.941+02:00  INFO 140917 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-23T16:19:29.347+02:00  INFO 140917 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T16:19:29.599+02:00  WARN 140917 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-23T16:19:30.082+02:00  INFO 140917 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-07-23T16:19:30.174+02:00  INFO 140917 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-07-23T16:19:30.203+02:00  INFO 140917 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Started ThreadingSoundsApplication in 5.423 seconds (process running for 5.745)
-2025-07-23T16:20:00.678+02:00  INFO 140917 --- [Threading-Sounds] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-23T16:20:00.678+02:00  INFO 140917 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-23T16:20:00.680+02:00  INFO 140917 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-07-23T16:20:34.873+02:00  INFO 140917 --- [Threading-Sounds] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-23T16:20:34.876+02:00  INFO 140917 --- [Threading-Sounds] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-23T16:20:34.881+02:00  INFO 140917 --- [Threading-Sounds] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-23T16:20:34.884+02:00  INFO 140917 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-23T16:20:34.898+02:00  INFO 140917 --- [Threading-Sounds] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-23T16:53:23.671+02:00  INFO 15105 --- [Threading-Sounds] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-23T16:53:23.958+02:00  INFO 15105 --- [Threading-Sounds] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23T16:53:24.106+02:00  WARN 15105 --- [Threading-Sounds] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-23T16:53:24.389+02:00  INFO 15105 --- [Threading-Sounds] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-07-23T16:53:24.436+02:00  INFO 15105 --- [Threading-Sounds] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-23T16:53:24.451+02:00  INFO 15105 --- [Threading-Sounds] [main] c.t.T.ThreadingSoundsApplication         : Started ThreadingSoundsApplication in 3.224 seconds (process running for 3.426)
+2025-07-23T16:53:52.272+02:00  INFO 15105 --- [Threading-Sounds] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-23T16:53:52.272+02:00  INFO 15105 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-23T16:53:52.273+02:00  INFO 15105 --- [Threading-Sounds] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
