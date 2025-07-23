@@ -1,10 +1,12 @@
-package com.threadingsounds.Threading_Sounds;
+package com.threadingsounds.Threading_Sounds.controllers;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,6 +18,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.threadingsounds.Threading_Sounds.dto.SongDto;
+import com.threadingsounds.Threading_Sounds.entities.Song;
+import com.threadingsounds.Threading_Sounds.services.MainService;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -23,10 +29,10 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/songs")
 public class MainController {
 
+    private static final Logger logger = LoggerFactory.getLogger(MainService.class);
 
     private final MainService songsService;
 
-    //Actuator is also working in /actuator/health, needs configuration if we want more precise metrics and info
     @GetMapping("/health")
     public ResponseEntity<Map<String, Object>> healthCheck() {
         Map<String, Object> status = new HashMap<>();
@@ -35,15 +41,19 @@ public class MainController {
         return ResponseEntity.ok(status);
     }
 
-    
+    // Creates a song using the DTO
     @PostMapping
-    public ResponseEntity<Song> createSong(@RequestBody Song song) {
-        Song savedSong = songsService.createSong(song);
-        return new ResponseEntity<>(savedSong, HttpStatus.CREATED);
+    public ResponseEntity<Song> createSong(@RequestBody SongDto songDto) {
+        Song song = new Song();
+        song.setTitle(songDto.getTitle());
+        song.setLength(songDto.getLength());
+
+        Song saved = songsService.createSong(song, songDto.getArtistId(), songDto.getAlbumId());
+        return new ResponseEntity<>(saved, HttpStatus.CREATED);
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<Song> getSongById(@PathVariable("id") Long songId){
+    public ResponseEntity<Song> getSongById(@PathVariable("id") Long songId) {
         Song foundSong = songsService.getSongById(songId);
         return ResponseEntity.ok(foundSong);
     }
@@ -54,9 +64,14 @@ public class MainController {
         return ResponseEntity.ok(songs);
     }
 
+    // Updates a song using DTO
     @PutMapping("{id}")
-    public ResponseEntity<Song> updateSong(@PathVariable("id") Long songId, @RequestBody Song updatedSong) {
-        Song savedSong = songsService.updateSong(songId, updatedSong);
+    public ResponseEntity<Song> updateSong(@PathVariable("id") Long songId, @RequestBody SongDto songDto) {
+        Song updated = new Song();
+        updated.setTitle(songDto.getTitle());
+        updated.setLength(songDto.getLength());
+
+        Song savedSong = songsService.updateSong(songId, updated, songDto.getArtistId(), songDto.getAlbumId());
         return ResponseEntity.ok(savedSong);
     }
 

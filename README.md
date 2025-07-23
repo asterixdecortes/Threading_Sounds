@@ -155,7 +155,25 @@ That first line will create a table if needed or edit the one existing.
 The second one will manage the colums.
 
 ### SongsRepository
+Interface which inherits from JpaRepository where the majority of the functions needed in the service are declared.
 
-### MainController
+### Services
 
-### MainService
+### Controllers
+
+### Health Checks
+
+### Testing
+We will add this dependency
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+
+Then we can start with the tests
+
+### Logging
+Currently only logging on MainService.createSong and MainService.getSongById
