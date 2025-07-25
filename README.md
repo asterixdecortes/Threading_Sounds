@@ -286,3 +286,6 @@ The logs are in file /logs/threadingsounds.log
 
 Currently only logging on MainService.createSong, MainService.getSongById and the whole Spring app
 
+### Endpoints Documentation
+Using right now [springdoc](https://springdoc.org/#Introduction) to generate it, you can see its UI at 
+http://server:port/context-path/swagger-ui.html
